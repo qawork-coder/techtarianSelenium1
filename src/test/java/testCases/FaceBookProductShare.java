@@ -11,20 +11,17 @@ import baseSetup.Base;
 import pages.AuthenticationPage;
 import pages.CreatAccountPage;
 import pages.Home;
+import pages.ProductPage;
+import pages.WomenPage;
 
-public class LoginWithValidUser extends Base {
-
-	// 1. Create a driver variable
-	// 2. Create the objects for the PageClasses
-	// 3. Pass the driver variable from baseClass
-	// 4. Initialize the Page Objects
-	// 5. Create your TC
-
+public class FaceBookProductShare extends Base {
 	private WebDriver driver;
 
 	AuthenticationPage authPage = null;
 	CreatAccountPage createNewAcc = null;
 	Home homePage = null;
+	WomenPage womenPage=null;
+	ProductPage	productPage=null;
 
 	@BeforeSuite
 	public void initialSetup() throws IOException {
@@ -32,6 +29,8 @@ public class LoginWithValidUser extends Base {
 		authPage = new AuthenticationPage(driver);
 		createNewAcc = new CreatAccountPage(driver);
 		homePage = new Home(driver);
+		womenPage = new WomenPage(driver);
+		productPage=new ProductPage(driver);
 
 	}
 
@@ -40,6 +39,12 @@ public class LoginWithValidUser extends Base {
 		homePage.verifySearchField();
 		authPage.goToAuthenticationPage();
 		authPage.LoginUser();
+		womenPage.goWomenTab();
+		womenPage.FirstImage();
+		productPage.clickFacebookShare();
+		productPage.switchChildWindow();
+		productPage.enterFBCredentials();
+		
 	}
 
 }

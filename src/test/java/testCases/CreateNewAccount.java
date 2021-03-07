@@ -1,5 +1,8 @@
 package testCases;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -18,7 +21,7 @@ public class CreateNewAccount extends Base {
 	Home homePage = null;
 
 	@BeforeSuite
-	public void initialSetup() {
+	public void initialSetup() throws IOException {
 		driver = getDriver();
 		authPage = new AuthenticationPage(driver);
 		createNewAcc = new CreatAccountPage(driver);
@@ -31,7 +34,8 @@ public class CreateNewAccount extends Base {
 	{
 		homePage.verifySearchField();
 		authPage.goToAuthenticationPage();
-		authPage.enterNewEmailId();
+		createNewAcc.randomEmail();
+		//authPage.enterNewEmailId();
 		createNewAcc.CorrectFillForm();
 	}
 

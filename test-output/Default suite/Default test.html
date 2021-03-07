@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Mar 06 20:22:54 IST 2021</td>
+<td>Started on:</td><td>Sun Mar 07 19:26:42 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>49 seconds (49920 ms)</td>
+<tr><td>Total time:</td><td>10 seconds (10468 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.CreateNewAccount.testCase2()'><b>testCase2</b><br>Test class: testCases.CreateNewAccount</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: Florida
+<td title='testCases.LoginWithValidUser.testCase1()'><b>testCase1</b><br>Test class: testCases.LoginWithValidUser</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=search_query_top
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TJ&apos;, ip: &apos;192.168.0.107&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:283)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)
-	at pages.CreatAccountPage.CorrectFillForm(CreatAccountPage.java:137)
-	at testCases.CreateNewAccount.testCase2(CreateNewAccount.java:35)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at pages.Home.verifySearchField(Home.java:30)
+	at testCases.LoginWithValidUser.testCase1(LoginWithValidUser.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -113,16 +118,21 @@ Driver info: driver.version: unknown
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2007486296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2007486296'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: Florida
+</pre></div><a href='#' onClick='toggleBox("stack-trace1759250827", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1759250827'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=search_query_top
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TJ&apos;, ip: &apos;192.168.0.107&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:283)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)
-	at pages.CreatAccountPage.CorrectFillForm(CreatAccountPage.java:137)
-	at testCases.CreateNewAccount.testCase2(CreateNewAccount.java:35)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at pages.Home.verifySearchField(Home.java:30)
+	at testCases.LoginWithValidUser.testCase1(LoginWithValidUser.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -152,8 +162,8 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>49</td>
-<td>testCases.CreateNewAccount@131276c2</td></tr>
+<td>10</td>
+<td>testCases.LoginWithValidUser@131276c2</td></tr>
 </table><p>
 </body>
 </html>

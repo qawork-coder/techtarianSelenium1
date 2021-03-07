@@ -12,14 +12,7 @@ import pages.AuthenticationPage;
 import pages.CreatAccountPage;
 import pages.Home;
 
-public class LoginWithValidUser extends Base {
-
-	// 1. Create a driver variable
-	// 2. Create the objects for the PageClasses
-	// 3. Pass the driver variable from baseClass
-	// 4. Initialize the Page Objects
-	// 5. Create your TC
-
+public class AssertionsOnCreateAccountPage extends Base{
 	private WebDriver driver;
 
 	AuthenticationPage authPage = null;
@@ -34,12 +27,17 @@ public class LoginWithValidUser extends Base {
 		homePage = new Home(driver);
 
 	}
-
+	
 	@Test
-	public void testCase1() {
+	public void testCase2()
+	{
 		homePage.verifySearchField();
 		authPage.goToAuthenticationPage();
-		authPage.LoginUser();
+		createNewAcc.randomEmail();
+		//authPage.enterNewEmailId();
+		createNewAcc.InvalidFillForm();
+		createNewAcc.assertInavlidCountryErrorMessage();
 	}
 
 }
+

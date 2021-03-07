@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\TJ\AppData\Local\Temp\testng-eclipse--1681674934\testng-customsuite.xml</span>
+                    <span>C:\Users\TJ\AppData\Local\Temp\testng-eclipse--1701974894\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testCases.CreateNewAccount" hash-for-method="testCase2">testCase2</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="testCases.LoginWithValidUser" hash-for-method="testCase1">testCase1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,23 +122,28 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testCases.CreateNewAccount</span>
+              <span class="class-name">testCases.LoginWithValidUser</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testCase2">
-                  </a> <!-- testCase2 -->
-                  <span class="method-name">testCase2</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate option with value: Florida
+                  <a name="testCase1">
+                  </a> <!-- testCase1 -->
+                  <span class="method-name">testCase1</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=search_query_top
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TJ&apos;, ip: &apos;192.168.0.107&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:283)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)
-	at pages.CreatAccountPage.CorrectFillForm(CreatAccountPage.java:137)
-	at testCases.CreateNewAccount.testCase2(CreateNewAccount.java:35)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at pages.Home.verifySearchField(Home.java:30)
+	at testCases.LoginWithValidUser.testCase1(LoginWithValidUser.java:40)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -176,7 +181,7 @@ Driver info: driver.version: unknown
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\TJ\AppData\Local\Temp\testng-eclipse--1681674934\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\TJ\AppData\Local\Temp\testng-eclipse--1701974894\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,7 +190,7 @@ Driver info: driver.version: unknown
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.CreateNewAccount&quot;/&gt;
+      &lt;class name=&quot;testCases.LoginWithValidUser&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -227,14 +232,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testCase2')
-data.setCell(0, 2, 'testCases.CreateNewAccount')
-data.setCell(0, 3, 49849);
+data.setCell(0, 1, 'testCase1')
+data.setCell(0, 2, 'testCases.LoginWithValidUser')
+data.setCell(0, 3, 10363);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 49 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -260,7 +265,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.CreateNewAccount</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCases.LoginWithValidUser</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">initialSetup</span>
                 <span class="method-start">0 ms</span>
@@ -268,8 +273,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testCase2</span>
-                <span class="method-start">11661 ms</span>
+                <span class="method-name">testCase1</span>
+                <span class="method-start">4186 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

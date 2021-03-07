@@ -2,34 +2,39 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49920" started-at="2021-03-06T20:22:54 IST" finished-at="2021-03-06T20:23:44 IST">
+  <suite name="Default suite" duration-ms="10468" started-at="2021-03-07T19:26:42 IST" finished-at="2021-03-07T19:26:53 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49920" started-at="2021-03-06T20:22:54 IST" finished-at="2021-03-06T20:23:44 IST">
-      <class name="testCases.CreateNewAccount">
-        <test-method status="PASS" signature="initialSetup()[pri:0, instance:testCases.CreateNewAccount@131276c2]" name="initialSetup" is-config="true" duration-ms="11602" started-at="2021-03-06T20:22:42 IST" finished-at="2021-03-06T20:22:54 IST">
+    <test name="Default test" duration-ms="10468" started-at="2021-03-07T19:26:42 IST" finished-at="2021-03-07T19:26:53 IST">
+      <class name="testCases.LoginWithValidUser">
+        <test-method status="PASS" signature="initialSetup()[pri:0, instance:testCases.LoginWithValidUser@131276c2]" name="initialSetup" is-config="true" duration-ms="4116" started-at="2021-03-07T19:26:38 IST" finished-at="2021-03-07T19:26:42 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method status="FAIL" signature="testCase2()[pri:0, instance:testCases.CreateNewAccount@131276c2]" name="testCase2" duration-ms="49849" started-at="2021-03-06T20:22:54 IST" finished-at="2021-03-06T20:23:44 IST">
+        <test-method status="FAIL" signature="testCase1()[pri:0, instance:testCases.LoginWithValidUser@131276c2]" name="testCase1" duration-ms="10363" started-at="2021-03-07T19:26:42 IST" finished-at="2021-03-07T19:26:53 IST">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot locate option with value: Florida
+              <![CDATA[Cannot locate an element using id=search_query_top
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'TJ', ip: '192.168.0.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: driver.version: unknown]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with value: Florida
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=search_query_top
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'TJ', ip: '192.168.0.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:283)
-at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:186)
-at pages.CreatAccountPage.CorrectFillForm(CreatAccountPage.java:137)
-at testCases.CreateNewAccount.testCase2(CreateNewAccount.java:35)
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+at pages.Home.verifySearchField(Home.java:30)
+at testCases.LoginWithValidUser.testCase1(LoginWithValidUser.java:40)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -63,8 +68,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase2 -->
-      </class> <!-- testCases.CreateNewAccount -->
+        </test-method> <!-- testCase1 -->
+      </class> <!-- testCases.LoginWithValidUser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

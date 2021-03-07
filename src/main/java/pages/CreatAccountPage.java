@@ -1,6 +1,10 @@
 
 package pages;
 
+import static org.testng.Assert.assertEquals;
+
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreatAccountPage {
-
 	private WebDriver driver;// Global Variable driver
 
 	public CreatAccountPage(WebDriver driver)// Parametric Constructor
@@ -95,12 +98,30 @@ public class CreatAccountPage {
 	@FindBy(id = "submitAccount")
 	public WebElement RegisterCreateAcc;
 
+	@FindBy(xpath = "//*[@id=\"center_column\"]/div")
+	public WebElement ErrorCreateAcc;
+	
+	@FindBy(xpath="//*[text()='Country is invalid']")
+	public WebElement invalidCountryError;
+
+	public void ErrorAccCreate() {
+		System.out.println("Test case Passes as correct error message displays " + ErrorCreateAcc.getText());
+	}
+
 	public void goToAuthenticationPage() {
 		signInBtn.click();
 	}
 
+	public void randomEmail() {
+		emailNewAccount.click();
+		Random randomGenerator = new Random();
+		int randomInt = randomGenerator.nextInt(100000);
+		emailNewAccount.sendKeys("username" + randomInt + "@gmail.com");
+		createAccBtn.click();
+	}
+
 	public void enterNewEmailId() {
-		emailNewAccount.sendKeys("abc@gmail.com");
+		emailNewAccount.sendKeys("abc1234567@gmail.com");
 		createAccBtn.click();
 	}
 
@@ -110,8 +131,8 @@ public class CreatAccountPage {
 		genderCreateAcc.click();
 		firstNameCreateAcc.sendKeys("Mini");
 		lastNameCreateAcc.sendKeys("Nair");
-		emailCreateAcc.sendKeys("abc.gmail.com");
-		PasswdCreateAcc.sendKeys("abc");
+		// emailCreateAcc.sendKeys("");
+		PasswdCreateAcc.sendKeys("abcde");
 
 		// Select day from Days Dropdown for DOB
 		Select day = new Select(dayCreateAcc);
@@ -134,17 +155,70 @@ public class CreatAccountPage {
 
 		// Select State from dropdown
 		Select state = new Select(StateCreateAcc);
-		state.selectByValue("Florida");
-		POCreateAcc.sendKeys("10090909");
-
+		state.selectByValue("9");
+		  POCreateAcc.sendKeys("10090");
 		// Select Country from dropdown
 		Select Country = new Select(CountryCreateAcc);
-		Country.selectByValue("United States");
+		Country.selectByValue("21");
 
 		AddInfoCreateAcc.sendKeys("Adding informations here");
+		HphoneCreateAcc.sendKeys("8989898989");
+		MphoneCreateAcc.sendKeys("9898989898");
 		AliasAddCreateAcc.sendKeys("DEF Ave, Globe");
 		RegisterCreateAcc.click();
 
 	}
 
+	public void InvalidFillForm()
+
+	{
+		genderCreateAcc.click();
+		firstNameCreateAcc.sendKeys("Mini");
+		lastNameCreateAcc.sendKeys("Nair");
+		
+		PasswdCreateAcc.sendKeys("abcde");
+
+		// Select day from Days Dropdown for DOB
+		Select day = new Select(dayCreateAcc);
+		day.selectByValue("6");
+
+		// Select month from months Dropdown for DOB
+		Select month = new Select(monthCreateAcc);
+		month.selectByValue("4");
+
+		// Select year from year Dropdown for DOB
+		Select years = new Select(yearCreateAcc);
+		years.selectByValue("2020");
+
+		newsLetterCkbx.click();
+		firstNameAddrCreateAcc.sendKeys("Mini");
+		lastNameAddrCreateAcc.sendKeys("Nair");
+		CompanyCreateAcc.sendKeys("Techterrain");
+		AddressCreateAcc.sendKeys("ABC Avenue, Florida");
+		CityCreateAcc.sendKeys("Tampa");
+
+		// Select State from dropdown
+		Select state = new Select(StateCreateAcc);
+		state.selectByValue("9");
+		// Less than 4 character long PO code
+		POCreateAcc.sendKeys("100");
+
+		// Select Country from dropdown
+		Select Country = new Select(CountryCreateAcc);
+		// dropwown for Country blank
+		Country.selectByVisibleText("-");
+
+		AddInfoCreateAcc.sendKeys("Adding informations here");
+		HphoneCreateAcc.sendKeys("8989898989");
+		MphoneCreateAcc.sendKeys("9898989898");
+		AliasAddCreateAcc.sendKeys("DEF Ave, Globe");
+		RegisterCreateAcc.click();
+
+	}
+
+	public void assertInavlidCountryErrorMessage()
+	{
+		assertEquals(invalidCountryError.getText(), "Country is invalid");
+	}
+	
 }

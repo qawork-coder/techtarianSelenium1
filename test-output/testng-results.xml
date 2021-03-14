@@ -1,75 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10468" started-at="2021-03-07T19:26:42 IST" finished-at="2021-03-07T19:26:53 IST">
+  <suite name="Suite" duration-ms="10618" started-at="2021-03-14T18:18:47 IST" finished-at="2021-03-14T18:18:57 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10468" started-at="2021-03-07T19:26:42 IST" finished-at="2021-03-07T19:26:53 IST">
-      <class name="testCases.LoginWithValidUser">
-        <test-method status="PASS" signature="initialSetup()[pri:0, instance:testCases.LoginWithValidUser@131276c2]" name="initialSetup" is-config="true" duration-ms="4116" started-at="2021-03-07T19:26:38 IST" finished-at="2021-03-07T19:26:42 IST">
+    <test name="Test" duration-ms="10618" started-at="2021-03-14T18:18:47 IST" finished-at="2021-03-14T18:18:57 IST">
+      <class name="testCases.CreateNewAccount">
+        <test-method status="PASS" signature="initialSetup()[pri:0, instance:testCases.CreateNewAccount@167fdd33]" name="initialSetup" is-config="true" duration-ms="18421" started-at="2021-03-14T18:18:28 IST" finished-at="2021-03-14T18:18:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method status="FAIL" signature="testCase1()[pri:0, instance:testCases.LoginWithValidUser@131276c2]" name="testCase1" duration-ms="10363" started-at="2021-03-07T19:26:42 IST" finished-at="2021-03-07T19:26:53 IST">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate an element using id=search_query_top
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TJ', ip: '192.168.0.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using id=search_query_top
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TJ', ip: '192.168.0.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
-at pages.Home.verifySearchField(Home.java:30)
-at testCases.LoginWithValidUser.testCase1(LoginWithValidUser.java:40)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="testCase2()[pri:0, instance:testCases.CreateNewAccount@167fdd33]" name="testCase2" duration-ms="10538" started-at="2021-03-14T18:18:47 IST" finished-at="2021-03-14T18:18:57 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase1 -->
-      </class> <!-- testCases.LoginWithValidUser -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- testCase2 -->
+      </class> <!-- testCases.CreateNewAccount -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
